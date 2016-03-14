@@ -1,37 +1,26 @@
-// Business Logic
-// var helloWorld = function(){
-//   return false;
-//
-//   For loops and shit go here
-//   If/else like a madman here
-//
-//  return shit like a mo-fo here
-//
-//   ...whatchyu lookin at bitch? Green those specs and git back to work!
-//  Time fo yo Interface Logic, then suckface when it's all green.
-// };
+function Entry (title, content) {
+  this.title = title;
+  this.content = content;
+  this.wordCount = [];
+}
 
+Entry.prototype.journalEntry = function() {
+  return this.title + " " + this.content;
+}
 
+Entry.prototype.countCharacters = function(content) {
+  return text.length();
+}
 
+$(document).ready(function() {
+  $('#journal').submit(function(event){
+    event.preventDefault();
+    var title = $('#title').val();
+    var content = $('#content').val();
+    var newJournal = Entry(title, content);
 
-
-
-
-
-// User Interface Logic
-// $(document).ready(function() {
-//   $("form#IDselector").submit(function(event) {
-//     // variables and shit go here, bitch!
+    var wordCount = content.length;
+    $('#newjournal').append('<article><h2>' + title + '</h2><p>' + content + '</p><p>' + wordCount + 'letters</p></article>');
+  });
+});
 //
-//     // link your muthafuckin' variables to yo bad-ass bidness logic function, Yo!
-//
-//     // Make shit happen here...BITCH!
-//
-//     // Muthafuckin' variables connect to your output down here hommie.
-//
-//     // Show me some money, hunny, and reveal that hiddin fine shit you got stashed.
-//
-//     // It's all good baby.'
-//     event.preventDefault();
-//   });
-// });
