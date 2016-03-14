@@ -8,8 +8,8 @@ Entry.prototype.journalEntry = function() {
   return this.title + " " + this.content;
 }
 
-Entry.prototype.countCharacters = function(content) {
-  return text.length();
+Entry.prototype.countCharacters = function() {
+  return this.content.length;
 }
 
 $(document).ready(function() {
@@ -17,10 +17,8 @@ $(document).ready(function() {
     event.preventDefault();
     var title = $('#title').val();
     var content = $('#content').val();
-    var newJournal = Entry(title, content);
-
-    var wordCount = content.length;
-    $('#newjournal').append('<article><h2>' + title + '</h2><p>' + content + '</p><p>' + wordCount + 'letters</p></article>');
+    var newJournal = new Entry(title, content);
+    $('#newjournal').append('<article><h2>' + title + '</h2><p>' + content + '</p></article>');
   });
 });
 //
