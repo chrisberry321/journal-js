@@ -1,0 +1,23 @@
+{
+  "name": "journal",
+  "version": "1.0.0",
+  "description": "========= # insertApplicationName",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisberry321/journal-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisberry321/journal-js/issues"
+  },
+  "homepage": "https://github.com/chrisberry321/journal-js#readme"
+}
